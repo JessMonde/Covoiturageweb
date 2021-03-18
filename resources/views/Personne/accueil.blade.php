@@ -19,6 +19,11 @@
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/extensions/nouislider.min.css">
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/ui/prism.min.css">
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/forms/select/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/calendars/fullcalendar.min.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/calendars/extensions/daygrid.min.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/calendars/extensions/timegrid.min.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/pickers/pickadate/pickadate.css">
+
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
@@ -139,7 +144,7 @@
         <div class="header-navbar-shadow"></div>
         <div class="content-wrapper">
             <div class="content-body">
-                dhghhhhhhhhhhhhhhh
+               @yield('content')
             </div>
         </div>
     
@@ -165,6 +170,13 @@
     <script src="app-assets/vendors/js/extensions/wNumb.js"></script>
     <script src="app-assets/vendors/js/extensions/nouislider.min.js"></script>
     <script src="app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+    <script src="/app-assets/vendors/js/calendar/fullcalendar.min.js"></script>
+    <script src="/app-assets/vendors/js/calendar/extensions/daygrid.min.js"></script>
+    <script src="/app-assets/vendors/js/calendar/extensions/timegrid.min.js"></script>
+    <script src="/app-assets/vendors/js/calendar/extensions/interactions.min.js"></script>
+    <script src="/app-assets/vendors/js/pickers/pickadate/picker.js"></script>
+    <script src="/app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
+    <script src="/app-assets/vendors/js/extensions/moment.min.js"></script>
     <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->
@@ -175,6 +187,8 @@
 
     <!-- BEGIN: Page JS-->
     <script src="app-assets/js/scripts/pages/app-ecommerce-shop.js"></script>
+    <script src="/app-assets/js/scripts/extensions/fullcalendar.js"></script>
+
     <!-- END: Page JS-->
 
 </body>
