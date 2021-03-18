@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProposerTrajetController;
 use App\Http\Controllers\PrendreTrajetController;
 use App\Http\Controllers\ListetrajetController;
+use App\Http\Controllers\EvenementController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,4 +29,5 @@ Route::get('Accueil', 'AccueilController@index')->name('Accueil');
 Route::get('ProposerTrajet', 'ProposerTrajetController@index')->name('ProposerTrajet');
 Route::get('PrendreTrajet', 'PrendreTrajetController@index')->name('PrendreTrajet');
 Route::get('ListeTrajet', 'ListetrajetController@index')->name('ListeTrajet');
+Route::get('Evenements', 'EvenementController@index')->name('Evenements');
 

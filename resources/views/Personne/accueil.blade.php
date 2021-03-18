@@ -123,9 +123,9 @@
                     </li>
                     <li class="dropdown nav-item" data-menu="dropdown"><a  class="nav-link" href="{{route('PrendreTrajet')}}"><i class="feather icon-thumbs-up"></i><span data-i18n="Dashboard">Prendre un trajet</span></a>
                     </li>
-                    <li class="dropdown nav-item" data-menu="dropdown"><a class="nav-link" href="" ><i class="feather icon-clipboard"></i><span data-i18n="Dashboard">Liste des Trajets</span></a>
+                    <li class="dropdown nav-item" data-menu="dropdown"><a class="nav-link" href="{{route('ListeTrajet')}}" ><i class="feather icon-clipboard"></i><span data-i18n="Dashboard">Liste des Trajets</span></a>
                     </li>
-                    <li class="dropdown nav-item" data-menu="dropdown"><a class="nav-link" href=""ata-i18n="Calender"><i class="feather icon-calendar"></i><span data-i18n="Dashboard">Evenements</span></a>
+                    <li class="dropdown nav-item" data-menu="dropdown"><a class="nav-link" href="{{route('Evenements')}}"ata-i18n="Calender"><i class="feather icon-calendar"></i><span data-i18n="Dashboard">Evenements</span></a>
                     </li>
                 </ul>
             </div>
@@ -148,7 +148,7 @@
 
     <!-- BEGIN: Footer-->
     <footer class="footer footer-static footer-light navbar-shadow">
-        <p class="clearfix blue-grey lighten-2 mb-0"><span class="float-md-left d-block d-md-inline-block mt-25">COPYRIGHT &copy; 2019<a class="text-bold-800 grey darken-2" href="https://1.envato.market/pixinvent_portfolio" target="_blank">Pixinvent,</a>All rights Reserved</span><span class="float-md-right d-none d-md-block">Hand-crafted & Made with<i class="feather icon-heart pink"></i></span>
+        <p class="clearfix blue-grey lighten-2 mb-0"><span class="float-md-left d-block d-md-inline-block mt-25">COPYRIGHT &copy; 2021<a class="text-bold-800 grey darken-2" href="https://1.envato.market/pixinvent_portfolio" target="_blank">JessMonde,</a>All rights Reserved</span><span class="float-md-right d-none d-md-block">Hand-crafted & Made with<i class="feather icon-heart pink"></i></span>
             <button class="btn btn-primary btn-icon scroll-top" type="button"><i class="feather icon-arrow-up"></i></button>
         </p>
     </footer>
