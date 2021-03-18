@@ -119,9 +119,9 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="dropdown nav-item" data-menu="dropdown"><a class="nav-link" href="" ><i class="feather icon-truck"></i><span data-i18n="Dashboard">Proposer un trajet</span></a>
+                    <li class="dropdown nav-item" data-menu="dropdown"><a class="nav-link" href="{{route('ProposerTrajet')}}" ><i class="feather icon-truck"></i><span data-i18n="Dashboard">Proposer un trajet</span></a>
                     </li>
-                    <li class="dropdown nav-item" data-menu="dropdown"><a  class="nav-link" href="""><i class="feather icon-thumbs-up"></i><span data-i18n="Dashboard">Prendre un trajet</span></a>
+                    <li class="dropdown nav-item" data-menu="dropdown"><a  class="nav-link" href="{{route('PrendreTrajet')}}"><i class="feather icon-thumbs-up"></i><span data-i18n="Dashboard">Prendre un trajet</span></a>
                     </li>
                     <li class="dropdown nav-item" data-menu="dropdown"><a class="nav-link" href="" ><i class="feather icon-clipboard"></i><span data-i18n="Dashboard">Liste des Trajets</span></a>
                     </li>
@@ -178,4 +178,6 @@
     <!-- END: Page JS-->
 
 </body>
-<!-- END: Body
+<!-- END: Body-->
+
+</html>

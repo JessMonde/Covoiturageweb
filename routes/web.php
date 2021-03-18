@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AccueilController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProposerTrajetController;
+use App\Http\Controllers\PrendreTrajetController;
+use App\Http\Controllers\ListetrajetController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +25,7 @@ Route::get('/', function () {
 });
 Route::get('Accueil', 'AccueilController@index')->name('Accueil');
 ////Les vues////////////
+Route::get('ProposerTrajet', 'ProposerTrajetController@index')->name('ProposerTrajet');
+Route::get('PrendreTrajet', 'PrendreTrajetController@index')->name('PrendreTrajet');
+Route::get('ListeTrajet', 'ListetrajetController@index')->name('ListeTrajet');
+
