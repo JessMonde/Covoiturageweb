@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="app-assets/css/themes/semi-dark-layout.css">
 
     <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/forms/wizard.css">
     <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/menu-types/horizontal-menu.css">
     <link rel="stylesheet" type="text/css" href="app-assets/css/core/colors/palette-gradient.css">
     <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/extensions/noui-slider.min.css">
