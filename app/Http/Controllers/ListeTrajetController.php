@@ -13,7 +13,7 @@ class ListeTrajetController extends Controller
      */
     public function index()
     {
-        //
+        return view('Personne.ListeTrajet');
     }
 
     /**
