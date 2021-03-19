@@ -51,7 +51,7 @@
 
 <!-- BEGIN: Body-->
 
-<body class="horizontal-layout horizontal-menu content-detached-left-sidebar ecommerce-application navbar-floating footer-static  " data-open="hover" data-menu="horizontal-menu" data-col="content-detached-left-sidebar">
+<body class="horizontal-layout horizontal-menu content-detached-left-sidebar ecommerce-application navbar-floating footer-static  " data-open="hover" data-menu="horizontal-menu" data-col="content-detached-left-sidebar" id="body">
 
     <!-- BEGIN: Header-->
     <nav class="header-navbar navbar-expand-lg navbar navbar-with-menu navbar-fixed navbar-shadow navbar-brand-center">
@@ -145,6 +145,7 @@
         <div class="header-navbar-shadow"></div>
         <div class="content-wrapper">
             <div class="content-body">
+                <img src="" alt="">
                @yield('content')
             </div>
         </div>
