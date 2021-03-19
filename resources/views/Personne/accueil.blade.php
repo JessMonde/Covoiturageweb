@@ -23,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/calendars/extensions/daygrid.min.css">
     <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/calendars/extensions/timegrid.min.css">
     <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/pickers/pickadate/pickadate.css">
-
+@yield('css')
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
@@ -190,7 +190,7 @@
     <!-- BEGIN: Page JS-->
     <script src="app-assets/js/scripts/pages/app-ecommerce-shop.js"></script>
     <script src="/app-assets/js/scripts/extensions/fullcalendar.js"></script>
-
+@yield('js')
     <!-- END: Page JS-->
 
 </body>
