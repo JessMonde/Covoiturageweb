@@ -9,20 +9,20 @@
                     </div>
                     <div class="card-content">
                         <div class="card-body">
-                                <form action="#" class="number-tab-steps wizard-circle">
-                                            <!-- Step 1 -->
+                                <form action="{{route('ProposerTrajet.store')}}" method="post" class="number-tab-steps wizard-circle">
+                                    {{ csrf_field() }}
                                         <fieldset>
                                             <div class="row">
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label for="firstName1">Nom du Trajet</label>
-                                                        <input type="text" class="form-control" name="firstName1">
+                                                        <label >Nom du Trajet</label>
+                                                        <input type="text" class="form-control" name="Nom_trajet">
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-6">
                                                         <div class="form-group">
-                                                            <label for="lastName1">N* Matricule de la voiture</label>
-                                                            <input type="text" class="form-control" name="lastName1">
+                                                            <label >N* Matricule de la voiture</label>
+                                                            <input type="number" class="form-control" name="voiture">
                                                         </div>
                                                 </div>
                                             </div>
@@ -30,28 +30,17 @@
                                             <div class="row">
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label for="emailAddress1">Lieu de depart</label>
-                                                        <input type="email" class="form-control" name="emailAddress1">
+                                                        <label >Lieu de depart</label>
+                                                        <input type="text" class="form-control" name="ville_depart">
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label for="location1">Nombre de Place disponible</label>
-                                                            <select class="custom-select form-control" name="">
-                                                                <option value="">1</option>
-                                                                <option value="">2</option>
-                                                                <option value="">3</option>
-                                                                <option value="">4</option>
-                                                                <option value="">5</option>
-                                                                <option value="">6</option>
-                                                                <option value="">7</option>
-                                                                <option value="">8</option>
-                                                                <option value="">9</option>
-                                                                <option value="">10</option>
-                                                                <option value="">11</option>
-                                                                <option value="">12</option>
-                                                                <option value="">13</option>
-                                                                <option value="">14</option>
+                                                        <label>Nombre de Place disponible</label>
+                                                            <select class="custom-select form-control" name="Nbr_Place_dispo">
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
                                                             </select>
                                                     </div>
                                                 </div>
@@ -62,22 +51,26 @@
                                                 <div class="row">
                                                     <div class="col-sm-6">
                                                         <div class="form-group">
-                                                            <label for="proposalTitle1">Lieu d'arrivé</label>
-                                                            <input type="text" class="form-control" name="proposalTitle1">
+                                                            <label >Lieu d'arrivé</label>
+                                                            <input type="text" class="form-control" name="ville_Arrive">
                                                         </div>
                                                         <div class="form-group">
-                                                            <label for="jobtitle">Heure de depart</label>
-                                                            <input type="text" class="form-control" name="jobtitle">
+                                                            <label >Heure de depart</label>
+                                                            <input type="number" class="form-control" name="Heure_depart">
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-6">
                                                         <div class="form-group">
-                                                            <label for="shortDescription1">Date de depart</label>
-                                                            <input type="text" class="form-control" name="jobtitle">
+                                                            <label>Date de depart</label>
+                                                            <input type="date" class="form-control" name="Date">
                                                         </div>
                                                         <div class="form-group">
-                                                                <label for="eventName1">Heure d'arrivé</label>
-                                                                <input type="text" class="form-control" name="eventName1">
+                                                                <label >Heure d'arrivé</label>
+                                                                <input type="number" class="form-control" name="Heure_Arrive">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label >Prix</label>
+                                                            <input type="number" class="form-control" name="Prix">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -87,7 +80,7 @@
                                                     <button type="button" href="" class="btn btn-outline-primary mr-1 mb-1">Accueil</button>
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <button type="button" href="" class="btn btn-outline-success mr-1 mb-1">Success</button>
+                                                    <button type="submit"  class="btn btn-outline-success mr-1 mb-1">Valider</button>
                                                 </div>
                                             </div>
                                          </form>

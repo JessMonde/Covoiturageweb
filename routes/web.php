@@ -26,8 +26,7 @@ Route::get('/', function () {
 });
 Route::get('Accueil', 'AccueilController@index')->name('Accueil');
 ////Les vues////////////
-Route::get('ProposerTrajet', 'ProposerTrajetController@index')->name('ProposerTrajet');
 Route::get('PrendreTrajet', 'PrendreTrajetController@index')->name('PrendreTrajet');
-Route::get('ListeTrajet', 'ListetrajetController@index')->name('ListeTrajet');
+Route::resource('ListeTrajet', 'ListetrajetController');
 Route::get('Evenements', 'EvenementController@index')->name('Evenements');
-
+Route::resource('ProposerTrajet','ProposerTrajetController');

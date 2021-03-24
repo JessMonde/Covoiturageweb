@@ -14,17 +14,33 @@
                                     <table class="table zero-configuration">
                                         <thead>
                                             <tr>
-                                                <th>Name</th>
-                                                <th>Position</th>
-                                                <th>Office</th>
-                                                <th>Age</th>
-                                                <th>Start date</th>
-                                                <th>Salary</th>
+                                                <th>Trajets</th>
+                                                <th>Lieu Depart</th>
+                                                <th>Lieu Arrivee</th>
+                                                <th>Heure</th>
+                                                <th>Place</th>
+                                                <th>N* Voiture</th>
+                                                <th>Prix</th>
+                                                <th>Date</th>
                                                 <th>Actions</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            
+                                          @foreach ($datas as $item)
+                                          <tr>
+                                            <td>{{$item->Nom_trajet}}</td>
+                                            <td>{{$item->ville_depart}}</td>
+                                            <td>{{$item->ville_Arrive}}</td>
+                                            <td>{{$item->Heure_depart}}</td>
+                                            <td>{{$item->Nbr_Place_dispo}}</td>
+                                            <td>{{$item->voiture}}</td>
+                                            <td>{{$item->Prix}}</td>
+                                            <td>{{$item->Date}}</td>
+                                            <td>
+                                                <button>editer</button>
+                                            </td>
+                                          </tr>
+                                          @endforeach  
                                         </tbody>
                                     </table>
                                 </div>

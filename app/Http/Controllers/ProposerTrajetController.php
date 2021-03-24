@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Trajet;
 
 class ProposerTrajetController extends Controller
 {
@@ -13,7 +14,8 @@ class ProposerTrajetController extends Controller
      */
     public function index()
     {
-        return view('Personne.AjouterTrajet');
+        return view('Personne.AjouterTrajet')
+            ->withDatas(Trajet::all());
     }
 
     /**
@@ -23,7 +25,7 @@ class ProposerTrajetController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -34,7 +36,22 @@ class ProposerTrajetController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd($request->all());
+        $request -> validate([
+            'Nom_trajet'=>'required|string',
+            'ville_depart'=>'required|string',
+            'ville_Arrive'=>'required|string',
+            'Heure_depart'=>'required|numeric',
+            'Heure_Arrive'=>'required|numeric',
+            'Nbr_Place_dispo'=>'required|integer',
+            'voiture'=>'required|numeric|min:0',
+            'Date'=>'required|date',
+            'Prix'=>'required|integer|min:0',
+        ]);
+        // dd($request->all());
+        Trajet::create($request->all());
+        return redirect()->route('ListeTrajet');
+
     }
 
     /**
@@ -81,4 +98,5 @@ class ProposerTrajetController extends Controller
     {
         //
     }
+
 }

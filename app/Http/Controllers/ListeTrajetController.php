@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Trajet;
 
 class ListeTrajetController extends Controller
 {
@@ -13,7 +14,8 @@ class ListeTrajetController extends Controller
      */
     public function index()
     {
-        return view('Personne.ListeTrajet');
+        return view('Personne.ListeTrajet')
+        ->withDatas(Trajet::All());
     }
 
     /**

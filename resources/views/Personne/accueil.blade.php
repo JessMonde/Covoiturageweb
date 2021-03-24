@@ -125,11 +125,11 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="dropdown nav-item" data-menu="dropdown"><a class="nav-link" href="{{route('ProposerTrajet')}}" ><i class="feather icon-truck"></i><span data-i18n="Dashboard">Proposer un trajet</span></a>
+                    <li class="dropdown nav-item" data-menu="dropdown"><a class="nav-link" href="{{route('ProposerTrajet.index')}}" ><i class="feather icon-truck"></i><span data-i18n="Dashboard">Proposer un trajet</span></a>
                     </li>
                     <li class="dropdown nav-item" data-menu="dropdown"><a  class="nav-link" href="{{route('PrendreTrajet')}}"><i class="feather icon-thumbs-up"></i><span data-i18n="Dashboard">Prendre un trajet</span></a>
                     </li>
-                    <li class="dropdown nav-item" data-menu="dropdown"><a class="nav-link" href="{{route('ListeTrajet')}}" ><i class="feather icon-clipboard"></i><span data-i18n="Dashboard">Liste des Trajets</span></a>
+                    <li class="dropdown nav-item" data-menu="dropdown"><a class="nav-link" href="{{route('ListeTrajet.index')}}" ><i class="feather icon-clipboard"></i><span data-i18n="Dashboard">Liste des Trajets</span></a>
                     </li>
                     <li class="dropdown nav-item" data-menu="dropdown"><a class="nav-link" href="{{route('Evenements')}}"ata-i18n="Calender"><i class="feather icon-calendar"></i><span data-i18n="Dashboard">Evenements</span></a>
                     </li>

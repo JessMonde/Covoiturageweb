@@ -14,12 +14,14 @@
                                     <table class="table zero-configuration">
                                         <thead>
                                             <tr>
-                                                <th>Name</th>
-                                                <th>Position</th>
-                                                <th>Office</th>
-                                                <th>Age</th>
-                                                <th>Start date</th>
-                                                <th>Salary</th>
+                                                <th>Trajets</th>
+                                                <th>Lieu Depart</th>
+                                                <th>Lieu Arrivee</th>
+                                                <th>Heure</th>
+                                                <th>Place</th>
+                                                <th>N* Voiture</th>
+                                                <th>Prix</th>
+                                                <th>Date</th>
                                                 <th>Actions</th>
                                             </tr>
                                         </thead>
