@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Reservation;
 
 class PrendreTrajetController extends Controller
 {
@@ -13,7 +14,8 @@ class PrendreTrajetController extends Controller
      */
     public function index()
     {
-        return view('Personne.PrendreTrajet');
+        return view('Personne.PrendreTrajet')
+        ->withDatas(Reservation::All());
     }
 
     /**
@@ -34,7 +36,11 @@ class PrendreTrajetController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request ->validate([
+            'Id_trajet'=>'required|integer',
+        ]);
+        Reservation::create($request->all());
+        return redirect()->route('Personne.accueil');
     }
 
     /**

@@ -9,7 +9,7 @@
                     </div>
                     <div class="card-content">
                         <div class="card-body card-dashboard">
-                            <p class="card-text">Prendre un Trajet</p>
+                            <p class="card-text">Reserver un trajet</p>
                                 <div class="table-responsive">
                                     <table class="table zero-configuration">
                                         <thead>
@@ -26,7 +26,21 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            
+                                            @foreach ($datas as $item)
+                                            <tr>
+                                                <td>{{$item->Nom_trajet}}</td>
+                                                <td>{{$item->ville_depart}}</td>
+                                                <td>{{$item->ville_Arrive}}</td>
+                                                <td>{{$item->Heure_depart}}</td>
+                                                <td>{{$item->Nbr_Place_dispo}}</td>
+                                                <td>{{$item->voiture}}</td>
+                                                <td>{{$item->Prix}}</td>
+                                                <td>{{$item->Date}}</td>
+                                                <td>
+                                                    <button>Reserver</button>
+                                                </td>
+                                            </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>
