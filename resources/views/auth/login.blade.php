@@ -87,7 +87,7 @@
                                         </div>
                                         <div class="login-footer">
                                             <div class="divider">
-                                                <div class="divider-text">OR</div>
+                                                <div class="divider-text">Connexion</div>
                                             </div>
                                         </div>
                                     </div>

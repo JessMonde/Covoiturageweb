@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use Auth;
-class RegisterController extends Controller
+
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +13,7 @@ class RegisterController extends Controller
      */
     public function index()
     {
-        //
+        return view('welcome');
     }
 
     /**
@@ -35,7 +34,7 @@ class RegisterController extends Controller
      */
     public function store(Request $request)
     {
-        
+        //
     }
 
     /**
@@ -81,24 +80,5 @@ class RegisterController extends Controller
     public function destroy($id)
     {
         //
-    }
-    use AuthenticatesUsers;
-    protected $redirectTo;
-    public function redirectTo()
-    {
-        switch(Auth::user()->role){
-            case 'Admin':
-                 $this->redirectTo = 'Admin';
-                 return $this->redirectTo;
-                 break;
-            case 'Conducteur':
-                 $this->redirectTo = 'Conducteur';
-                 return $this->redirectTo;
-                 break;
-            case 'Passager':
-                 $this->redirectTo = 'Passager';
-                 return $this->redirectTo;
-                 break;                    
-         }
     }
 }
