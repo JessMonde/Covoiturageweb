@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AccueilController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ProposerTrajetController;
 use App\Http\Controllers\PrendreTrajetController;
 use App\Http\Controllers\ListetrajetController;
@@ -20,6 +21,8 @@ use App\Http\Controllers\EvenementController;
 */
 ///////Connexion///////////////
 Route::get('Connexion', 'LoginController@index')->name('Connexion');
+// Route::get('Inscription','RegisterController');
+Route::get('Inscrire','RegisterController@index');
 ///////Home///////////////
 Route::get('/', function () {
     return view('welcome');
