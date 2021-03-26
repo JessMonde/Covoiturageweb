@@ -21,8 +21,6 @@ use App\Http\Controllers\EvenementController;
 */
 ///////Connexion///////////////
 Route::get('Connexion', 'LoginController@index')->name('Connexion');
-// Route::get('Inscription','RegisterController');
-Route::get('Inscrire','RegisterController@index');
 ///////Home///////////////
 Route::get('/', function () {
     return view('welcome');

@@ -64,30 +64,33 @@
                                         <p class="px-2">Welcome back, please login to your account.</p>
                                         <div class="card-content">
                                             <div class="card-body pt-1">
-                                                <form action="index.html">
+                                                <form action="" method="post">
                                                     <fieldset class="form-label-group form-group position-relative has-icon-left">
-                                                        <input type="text" class="form-control"  placeholder="Nom et Prenoms" required>
-                                                        <div class="form-control-position">
-                                                            <i class="feather icon-user"></i>
-                                                        </div>
+                                                        <input type="text" class="form-control"  placeholder="Nom et Prenoms" name="nom" required>
+                                                            <div class="form-control-position">
+                                                                <i class="feather icon-user"></i>
+                                                            </div>
                                                         <label for="user-name">Nom et Prenoms</label>
                                                     </fieldset>
+
                                                     <fieldset class="form-label-group form-group position-relative has-icon-left">
-                                                        <input type="text" class="form-control"  placeholder="Telephone" required>
-                                                        <div class="form-control-position">
-                                                            <i class="feather icon-phone"></i>
-                                                        </div>
+                                                        <input type="text" class="form-control"  placeholder="Telephone" name="telephone" required>
+                                                            <div class="form-control-position">
+                                                                <i class="feather icon-phone"></i>
+                                                            </div>
                                                         <label for="user-name">Telephone</label>
                                                     </fieldset>
+
                                                     <fieldset class="form-label-group form-group position-relative has-icon-left">
-                                                        <input type="text" class="form-control"  placeholder="Email" required>
-                                                        <div class="form-control-position">
-                                                            <i class="feather icon-mail"></i>
-                                                        </div>
+                                                        <input type="text" class="form-control"  placeholder="Email" name="email"  required>
+                                                            <div class="form-control-position">
+                                                                <i class="feather icon-mail"></i>
+                                                            </div>
                                                         <label for="user-name">Email</label>
                                                     </fieldset>
+
                                                     <fieldset class="form-label-group form-group position-relative has-icon-left">
-                                                        <select id="inputState1" class="form-control" title="Id_Role" name="Id_Role" required="true">
+                                                        <select class="form-control" title="Id_Role" name="Id_Role" required="true">
                                                             @foreach ($role as $r)
                                                                 <option value="{{$r->id }}">{{ $r->nom}}</option>
                                                             @endforeach
@@ -95,14 +98,15 @@
                                                     </fieldset>
 
                                                     <fieldset class="form-label-group position-relative has-icon-left">
-                                                        <input type="password" class="form-control"  placeholder="Password" required>
-                                                        <div class="form-control-position">
-                                                            <i class="feather icon-lock"></i>
-                                                        </div>
+                                                        <input type="password" class="form-control"  placeholder="Password" name="password" required>
+                                                            <div class="form-control-position">
+                                                                <i class="feather icon-lock"></i>
+                                                            </div>
                                                         <label for="user-password">Password</label>
                                                     </fieldset>
-                                                    <a href="auth-register.html" class="btn btn-outline-primary float-left btn-inline">Register</a>
-                                                    <button type="submit" class="btn btn-primary float-right btn-inline">Login</button>
+
+                                                    <button type="submit" class="btn btn-primary float-right btn-inline">Register</button>
+                                                    <a href="{{route('Connexion')}}" class="btn btn-outline-primary float-left btn-inline">Login</a>
                                                 </form>
                                             </div>
                                         </div>
