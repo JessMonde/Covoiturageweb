@@ -38,3 +38,7 @@ Route::get('PrendreTrajet', 'PrendreTrajetController@index')->name('PrendreTraje
 Route::resource('ListeTrajet', 'ListetrajetController');
 Route::get('Evenements', 'EvenementController@index')->name('Evenements');
 Route::resource('ProposerTrajet','ProposerTrajetController');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

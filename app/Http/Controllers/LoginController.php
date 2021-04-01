@@ -21,18 +21,19 @@ class LoginController extends Controller
     }
     public function Connexion(REQUEST $request)
     {
-        $user = $request->only('telephone','password');
-        // $status=Auth::attempt(['telephone' => $request['telephone'], 'password' => $request['password']]);
-            if(Auth::attempt($user)){
-                $connect =User::where('id','=',Auth::user()->getAutIdentifier())->first();
-                if($connect->Id_Role==1){
-                    return redirect()->route('Conducteur');
-                }else{
-                    return redirect()->route('Accueil');
-                }
-            }else{
+        User::where('telephone',$request['telephone'])->get();
+        $status = Auth::attempt(['telephone' => $request['telephone'], 'password' => $request['password']]);
+        if($status){
+            $connect = User::where('id','=',Auth::user()->getAuthIdentifier())->first();
+             if($connect->Id_Role==1){
+                 return redirect()->route('Conducteur');
+             }else{
+                 return redirect()->route('Accueil');
+             }
+        }else{
                 return redirect()->route('Connexion');
             }
+
     }
 
     /**
