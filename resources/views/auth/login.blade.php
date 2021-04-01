@@ -64,23 +64,24 @@
                                         <p class="px-2">Welcome back, please login to your account.</p>
                                         <div class="card-content">
                                             <div class="card-body pt-1">
-                                                <form action="index.html">
+                                                <form action="{{route('Connexion')}}" method="post">
+                                                    @csrf
                                                     <fieldset class="form-label-group form-group position-relative has-icon-left">
-                                                        <input type="text" class="form-control" id="user-name" placeholder="Username" required>
+                                                        <input type="number" class="form-control" placeholder="Telephone" name="telephone" required>
                                                         <div class="form-control-position">
-                                                            <i class="feather icon-user"></i>
+                                                            <i class="feather icon-phone"></i>
                                                         </div>
-                                                        <label for="user-name">Username</label>
+                                                        <label >Telephone</label>
                                                     </fieldset>
 
                                                     <fieldset class="form-label-group position-relative has-icon-left">
-                                                        <input type="password" class="form-control" id="user-password" placeholder="Password" required>
+                                                        <input type="password" class="form-control" placeholder="Mots de Passe" name="password" required>
                                                         <div class="form-control-position">
                                                             <i class="feather icon-lock"></i>
                                                         </div>
-                                                        <label for="user-password">Password</label>
+                                                        <label >Password</label>
                                                     </fieldset>
-                                                    <a href="auth-register.html" class="btn btn-outline-primary float-left btn-inline">Register</a>
+                                                    <a href="{{route('inscrire')}}" class="btn btn-outline-primary float-left btn-inline">Register</a>
                                                     <button type="submit" class="btn btn-primary float-right btn-inline">Login</button>
                                                 </form>
                                             </div>

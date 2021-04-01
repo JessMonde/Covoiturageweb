@@ -9,7 +9,7 @@
     <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>Connexion</title>
+    <title>Inscription</title>
     <link rel="apple-touch-icon" href="/app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="/app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
@@ -64,7 +64,8 @@
                                         <p class="px-2">Welcome back, please login to your account.</p>
                                         <div class="card-content">
                                             <div class="card-body pt-1">
-                                                <form action="" method="post">
+                                                <form action="{{route('inscrire')}}" method="post">
+                                                    @csrf
                                                     <fieldset class="form-label-group form-group position-relative has-icon-left">
                                                         <input type="text" class="form-control"  placeholder="Nom et Prenoms" name="nom" required>
                                                             <div class="form-control-position">
@@ -74,7 +75,7 @@
                                                     </fieldset>
 
                                                     <fieldset class="form-label-group form-group position-relative has-icon-left">
-                                                        <input type="text" class="form-control"  placeholder="Telephone" name="telephone" required>
+                                                        <input type="number" class="form-control"  placeholder="Telephone" name="telephone" required>
                                                             <div class="form-control-position">
                                                                 <i class="feather icon-phone"></i>
                                                             </div>
@@ -82,7 +83,7 @@
                                                     </fieldset>
 
                                                     <fieldset class="form-label-group form-group position-relative has-icon-left">
-                                                        <input type="text" class="form-control"  placeholder="Email" name="email"  required>
+                                                        <input type="email" class="form-control"  placeholder="Email" name="email" required>
                                                             <div class="form-control-position">
                                                                 <i class="feather icon-mail"></i>
                                                             </div>
@@ -90,7 +91,7 @@
                                                     </fieldset>
 
                                                     <fieldset class="form-label-group form-group position-relative has-icon-left">
-                                                        <select class="form-control" title="Id_Role" name="Id_Role" required="true">
+                                                        <select class="form-control"  name="Id_Role" required>
                                                             @foreach ($role as $r)
                                                                 <option value="{{$r->id }}">{{ $r->nom}}</option>
                                                             @endforeach

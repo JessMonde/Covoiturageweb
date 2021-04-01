@@ -17,4 +17,7 @@ class Trajet extends Model
         'Date',
         'Prix',
     ];
+    public function user(){
+        return $this->HasMany('App\Models\Trajet');
+    }
 }

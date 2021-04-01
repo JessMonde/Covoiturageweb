@@ -8,6 +8,7 @@ use App\Http\Controllers\ProposerTrajetController;
 use App\Http\Controllers\PrendreTrajetController;
 use App\Http\Controllers\ListetrajetController;
 use App\Http\Controllers\EvenementController;
+use App\Http\Controllers\ConducteurController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,11 +22,17 @@ use App\Http\Controllers\EvenementController;
 */
 ///////Connexion///////////////
 Route::get('Connexion', 'LoginController@index')->name('Connexion');
+Route::post('Connexion', 'LoginController@Connexion')->name('Connexion');
+Route::get('Inscription','RegisterController@index')->name('inscrire');
+Route::post('Inscription','RegisterController@store')->name('inscrire');
 ///////Home///////////////
 Route::get('/', function () {
     return view('welcome');
 });
+////Home/////
 Route::get('Accueil', 'AccueilController@index')->name('Accueil');
+Route::get('Conducteur', 'ConducteurController@index')->name('Conducteur');
+
 ////Les vues////////////
 Route::get('PrendreTrajet', 'PrendreTrajetController@index')->name('PrendreTrajet');
 Route::resource('ListeTrajet', 'ListetrajetController');

@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
-<!-- BEGIN: Head-->
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,9 +45,6 @@
     <!-- END: Custom CSS-->
 
 </head>
-<!-- END: Head-->
-
-<!-- BEGIN: Body-->
 
 <body class="horizontal-layout horizontal-menu content-detached-left-sidebar ecommerce-application navbar-floating footer-static  " data-open="hover" data-menu="horizontal-menu" data-col="content-detached-left-sidebar" id="body">
 
@@ -108,35 +103,33 @@
                 </ul>
             </div>
             <!-- Horizontal menu content-->
-            <div class="navbar-container main-menu-content" data-menu="menu-container">
-                <!-- include includes/mixins-->
-                <ul class="nav navbar-nav" id="main-menu-navigation" data-menu="menu-navigation">
-                    <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="{{route('Accueil')}}" data-toggle="dropdown"><i class="feather icon-home"></i><span data-i18n="Dashboard">Accueil</span></a>
-                        <ul class="dropdown-menu">
-                            <li data-menu=""><a class="dropdown-item" href="" data-toggle="dropdown" data-i18n="Analytics"><i class="feather icon-activity"></i>DashBoard</a>
+                    <div class="navbar-container main-menu-content" data-menu="menu-container">
+                        <!-- include includes/mixins-->
+                        <ul class="nav navbar-nav" id="main-menu-navigation" data-menu="menu-navigation">
+                            <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="{{route('Accueil')}}" data-toggle="dropdown"><i class="feather icon-home"></i><span data-i18n="Dashboard">Accueil</span></a>
+                                <ul class="dropdown-menu">
+                                    <li data-menu=""><a class="dropdown-item" href="" data-toggle="dropdown" data-i18n="Analytics"><i class="feather icon-activity"></i>DashBoard</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown"><i class="feather icon-package"></i><span data-i18n="Apps">Apps</span></a>
+                                <ul class="dropdown-menu">
+                                    <li data-menu=""><a class="dropdown-item" href="" data-toggle="dropdown" data-i18n="Email"><i class="feather icon-mail"></i>Email</a>
+                                    </li>
+                                    <li data-menu=""><a class="dropdown-item" href="" data-toggle="dropdown" data-i18n="Calender"><i class="feather icon-calendar"></i>Evenements</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown nav-item" data-menu="dropdown"><a  class="nav-link" href="{{route('PrendreTrajet')}}"><i class="feather icon-truck"></i><span data-i18n="Dashboard">Prendre un trajet</span></a>
+                            </li>
+                            <li class="dropdown nav-item" data-menu="dropdown"><a class="nav-link" href="{{route('ListeTrajet.index')}}" ><i class="feather icon-clipboard"></i><span data-i18n="Dashboard">Liste des Trajets</span></a>
+                            </li>
+                            <li class="dropdown nav-item" data-menu="dropdown"><a class="nav-link" href="{{route('Evenements')}}"ata-i18n="Calender"><i class="feather icon-calendar"></i><span data-i18n="Dashboard">Evenements</span></a>
                             </li>
                         </ul>
-                    </li>
-                    <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown"><i class="feather icon-package"></i><span data-i18n="Apps">Apps</span></a>
-                        <ul class="dropdown-menu">
-                            <li data-menu=""><a class="dropdown-item" href="" data-toggle="dropdown" data-i18n="Email"><i class="feather icon-mail"></i>Email</a>
-                            </li>
-                            <li data-menu=""><a class="dropdown-item" href="" data-toggle="dropdown" data-i18n="Calender"><i class="feather icon-calendar"></i>Evenements</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown nav-item" data-menu="dropdown"><a class="nav-link" href="{{route('ProposerTrajet.index')}}" ><i class="feather icon-truck"></i><span data-i18n="Dashboard">Proposer un trajet</span></a>
-                    </li>
-                    <li class="dropdown nav-item" data-menu="dropdown"><a  class="nav-link" href="{{route('PrendreTrajet')}}"><i class="feather icon-thumbs-up"></i><span data-i18n="Dashboard">Prendre un trajet</span></a>
-                    </li>
-                    <li class="dropdown nav-item" data-menu="dropdown"><a class="nav-link" href="{{route('ListeTrajet.index')}}" ><i class="feather icon-clipboard"></i><span data-i18n="Dashboard">Liste des Trajets</span></a>
-                    </li>
-                    <li class="dropdown nav-item" data-menu="dropdown"><a class="nav-link" href="{{route('Evenements')}}"ata-i18n="Calender"><i class="feather icon-calendar"></i><span data-i18n="Dashboard">Evenements</span></a>
-                    </li>
-                </ul>
+                    </div> 
+                </div>
             </div>
-        </div>
-    </div>
     <!-- END: Main Menu-->
 
     <!-- BEGIN: Content-->
@@ -190,10 +183,7 @@
     <!-- BEGIN: Page JS-->
     <script src="app-assets/js/scripts/pages/app-ecommerce-shop.js"></script>
     <script src="/app-assets/js/scripts/extensions/fullcalendar.js"></script>
-@yield('js')
-    <!-- END: Page JS-->
+    @yield('js')
 
 </body>
-<!-- END: Body-->
-
 </html>

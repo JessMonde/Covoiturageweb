@@ -3,11 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Role;
-use App\Models\User;
-use Illuminate\Support\Facades\Auth;
 
-class LoginController extends Controller
+class ConducteurController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,23 +13,7 @@ class LoginController extends Controller
      */
     public function index()
     {
-        $role=Role::All();
-        return view('auth.login',compact('role'));
-    }
-    public function Connexion(REQUEST $request)
-    {
-        $user = $request->only('telephone','password');
-        // $status=Auth::attempt(['telephone' => $request['telephone'], 'password' => $request['password']]);
-            if(Auth::attempt($user)){
-                $connect =User::where('id','=',Auth::user()->getAutIdentifier())->first();
-                if($connect->Id_Role==1){
-                    return redirect()->route('Conducteur');
-                }else{
-                    return redirect()->route('Accueil');
-                }
-            }else{
-                return redirect()->route('Connexion');
-            }
+        return view('Personne.Conducteur');
     }
 
     /**
